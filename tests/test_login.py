@@ -9,7 +9,7 @@ def test_login_exitoso(login_page: Page, base_url):
     login.login("standard_user", "secret_sauce")
 
     expect(login_page).to_have_url(base_url + "inventory.html")
-    expect(login_page.get_by_text("Payments")).to_be_visible()
+    expect(login_page.get_by_text("Products")).to_be_visible()
 
 
 @pytest.mark.parametrize(
