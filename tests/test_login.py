@@ -3,11 +3,6 @@ import pytest
 from pages.login_page import LoginPage
 
 
-@pytest.fixture
-def login_page(page: Page, base_url):
-    page.goto(base_url)
-    return page
-
 def test_login_exitoso(login_page: Page, base_url):
     login = LoginPage(login_page)
 
